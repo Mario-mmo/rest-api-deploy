@@ -1,0 +1,34 @@
+### GET all movies
+GET http://localhost:1234/movies
+
+### GET movie by id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### GET movies by genre
+GET http://localhost:1234/movies?genre=comedy
+
+### POST new movie
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Mortadelo y Filemón",
+  "year": 2010,
+  "director": "Luis de la Fuente",
+  "duration": 150,
+  "poster": "https://pics.filmaffinity.com/La_gran_aventura_de_Mortadelo_y_Filemaon-793558989-large.jpg",
+  "genre": [
+    "Comedy",
+    "Action"
+  ],
+  "rate": 8
+}
+
+### Update Movie
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2005,
+  "title": "El huevo dorado del principe de las tinieblas"
+}
