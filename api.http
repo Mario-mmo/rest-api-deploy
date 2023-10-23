@@ -2,10 +2,10 @@
 GET http://localhost:1234/movies
 
 ### GET movie by id
-GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 
 ### GET movies by genre
-GET http://localhost:1234/movies?genre=comedy
+GET http://localhost:1234/movies?genre=drama
 
 ### POST new movie
 POST http://localhost:1234/movies
@@ -23,6 +23,9 @@ Content-Type: application/json
   ],
   "rate": 8
 }
+
+### DELETE movie
+DELETE http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 
 ### Update Movie
 PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
